@@ -38,3 +38,8 @@ To run the project locally, execute the following command:
 npm run serve
 
 This will start a local development server and you can access the login screen application in your browser at http://localhost:8080.
+
+## Login Credentials
+
+email: karthik@gmail.com
+password: Karthik@7829 

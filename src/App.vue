@@ -452,8 +452,8 @@ background-color: #1C1C1E;
 export default {
   data() {
     return {
-      Email: 'karthik@gmail.com',
-      Password: 'Karthik@7829',
+      email: 'karthik@gmail.com',
+      password: 'Karthik@7829',
       validEmail: true,
       validPassword: true
     };
@@ -464,16 +464,15 @@ export default {
       this.validPassword = this.validatePassword();
       if (this.validEmail && this.validPassword) {
         alert('Sucessfully Logged in:', this.email, this.password);
-        window.location.assign("")
+      }else {
+        alert('Invalid email or password. Please try again.');
       }
-      // // else{
-      //   alert('Invalid Credentials:', this.email, this.password);
     },
     validateEmail() {
       return /\S+@\S+\.\S+/.test(this.email);
     },
     validatePassword() {
-      return !!this.password;
+      return this.password.length >= 8;
     },
      forgotPassword() {
       alert("Recover Your Old Password Here..!");
